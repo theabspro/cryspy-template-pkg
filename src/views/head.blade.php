@@ -3,6 +3,11 @@
 @else
     <?php $cryspy_template_pkg_prefix = '';?>
 @endif
+@if(config('helper-pkg.DEV'))
+    <?php $helper_pkg_prefix = '/packages/abs/helper-pkg/src/';?>
+@else
+    <?php $helper_pkg_prefix = '';?>
+@endif
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,11 +26,11 @@
 <!-- Plugin CSS -->
 <!-- -------- -->
 <!-- Bootstrap -->
-<link href="{{ asset('public/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset($helper_pkg_prefix.'public/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
 <!-- Notify -->
-{{-- <link href="{{ asset('public/vendor/noty/css/noty.css') }}" rel="stylesheet" type="text/css" /> --}}
+{{-- <link href="{{ asset($helper_pkg_prefix.'public/vendor/noty/css/noty.css') }}" rel="stylesheet" type="text/css" /> --}}
 <!-- Daterange Picker -->
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('public/vendor/daterangepicker.min.css') }}"> --}}
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset($helper_pkg_prefix.'public/vendor/daterangepicker.min.css') }}"> --}}
 
 
 <!-- Theme CSS -->
