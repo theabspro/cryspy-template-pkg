@@ -1,0 +1,31 @@
+{
+    "name": "abs/cryspy-template-pkg",
+    "description": "Admin Cryspy Template by UITOUX",
+    "type": "library",
+    "require":
+    {},
+    "require-dev":
+    {},
+    "authors": [
+    {
+        "name": "Abdul",
+        "email": "abdulpro@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "extra":
+    {
+        "laravel":
+        {
+            "providers": [
+                "Abs\\CryspyTemplatePkg\\CryspyTemplatePkgServiceProvider"
+            ]
+        }
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Abs\\CryspyTemplatePkg\\": "src/"
+        }
+    }
+}
