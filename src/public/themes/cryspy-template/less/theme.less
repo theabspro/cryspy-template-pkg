@@ -1,8 +1,180 @@
 /* Import Less Files */
 @import "variables.less";
-section {
-    float: left;
+@import "menu.less";
+
+/* Import Css files */
+@import "../css/fontawesome.min.css";
+@import "../css/ionicons.min.css";
+
+/* General Css */
+body {
+    color: @color_body;
+    font-family: @body_font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: normal;
+    overflow-x: hidden;
+    position: relative;
+    background: #fff;
+    -webkit-font-smoothing: antialiased !important;
 }
-.title {
+hr {
+    &.md {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+p {
+    color: @color_paragraph;
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    color: @color_title;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1px;
+}
+h2 {
+    font-size: 46px;
+    line-height: 50px;
+}
+h3 {
+    font-size: 36px;
+    line-height: 40px;
+}
+h4 {
+    font-size: 28px;
+    line-height: 30px;
+}
+h5 {
+    font-size: 22px;
+    line-height: 26px;
+}
+h6 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+a {
+    .transition(all 350ms);
     color: @color_primary;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+        .transition(all 350ms);
+        color: @color_primary;
+    }
+}
+button {
+    .transition(all 350ms);
+    &:hover,
+    &:focus {
+        .transition(all 350ms);
+    }
+}
+/* Ul List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+/* Row */
+.row {
+    margin-bottom: 30px;
+    @media @max767 {
+        margin-bottom: 15px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+/* Typography */
+.typo-thin {
+    font-weight: 300;
+}
+/* Colors */
+.error,
+.mandatory {
+    color: @color_err;
+}
+
+.color-primary {
+    color: @color_primary;
+}
+
+.color-primary-light {
+    color: @color_primary_light;
+}
+
+.color-secondary {
+    color: @color_secondary;
+}
+
+.text-red {
+    color: @color_red;
+}
+
+.text-blue {
+    color: @color_blue;
+}
+
+.text-green {
+    color: @color_green;
+}
+
+.text-yellow {
+    color: @color_yellow;
+}
+
+.text-orange {
+    color: @color_primary;
+}
+/* Opacity Zero CSS */
+.opacity-0 {
+    opacity: 0;
+}
+/* Layout Css */
+.container {
+    max-width: @container_width;
+    width: 100%;
+}
+.main-wrap {
+    padding: 20px;
+    background: #fff;
+    min-height: 100vh;
+}
+section,
+.page-content {
+    padding-top: @section_space;
+    padding-bottom: @section_space;
+
+    .section-space-sm {
+        padding-top: @section_space;
+        padding-bottom: @section_space;
+    }
+}
+.content-wrap {
+    margin-top: 80px;
+    padding-top: 15px;
+    .page-header-inner {
+        padding-bottom: 20px;
+    }
+    .page-main-content {
+        position: relative;
+        background: #fff;
+        padding: 30px 15px 30px;
+        .radius(8px);
+        .shadow(0 0 10px 0 rgba(82, 82, 82, 0.2));
+        &.list-page {
+            padding: 0 0 15px;
+        }
+    }
 }
