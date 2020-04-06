@@ -34,4 +34,4 @@
 
 
 <!-- Theme CSS -->
-<link rel="stylesheet" type="text/css" href="{{ asset($cryspy_template_pkg_prefix.'public/themes/'.$theme.'/css/theme.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset($cryspy_template_pkg_prefix.'public/themes/'.$theme.'/less/theme.css') }}">
